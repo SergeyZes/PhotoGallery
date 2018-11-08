@@ -70,6 +70,12 @@ public class PhotoGalleryFragment extends Fragment {
         return v;
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        mThumbnailDownloader.clearQueue();
+    }
+
     private void setupAdapter() {
         if (isAdded()) {
             mPhotoRecyclerView.setAdapter(new PhotoAdapter(mItems));
