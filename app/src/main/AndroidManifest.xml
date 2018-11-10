@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="zesley.sergey.photogallery">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -19,9 +20,7 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name=".PollService"
-            android:exported="false"></service>
+        <service android:name=".PollService"></service>
     </application>
 
 </manifest>
